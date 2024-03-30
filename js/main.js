@@ -149,7 +149,7 @@ const sendEmail = (e) =>{
   e.preventDefault()
 
   // serviceID - templateID - #form -publicKey
-  emailjs.sendForm()
+  emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, '#contact-form', process.env.EMAILJS_PUBLIC_KEY)
     .then(() =>{
       // Show confirmation
       contactMessage.textContent = 'Message sent successfully ✅'
