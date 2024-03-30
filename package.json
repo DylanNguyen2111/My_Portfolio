@@ -1,0 +1,16 @@
+{
+    "name": "my-portfolio-website",
+    "version": "1.0.0",
+    "description": "A brief description of your project",
+    "main": "main.js",
+    "scripts": {
+      "start": "node main.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Dylan Nguyen",
+    "license": "ISC",
+    "dependencies": {
+    }
+  }
+  
