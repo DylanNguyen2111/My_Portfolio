@@ -26,7 +26,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         branch: gh-pages
-        folder: dist # Or use '.' for the root directory if your files are there
+        folder: . # Or use '.' for the root directory if your files are there
         token: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically creates this secret to authenticate in your workflow.
 
     - name: Inject secrets into JS
