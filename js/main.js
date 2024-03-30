@@ -142,21 +142,14 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 /* EMAIL JS */
-require('dotenv').config(); // Load environment variables from .env file
-
 const contactForm = document.getElementById('contact-form')
       contactMessage = document.getElementById('contact-message')
 
 const sendEmail = (e) =>{
   e.preventDefault()
 
-  // Access environment variables
-  const serviceID = process.env.SERVICE_ID;
-  const templateID = process.env.TEMPLATE_ID;
-  const publicKey = process.env.PUBLIC_KEY;
-
   // serviceID - templateID - #form -publicKey
-  emailjs.sendForm(serviceID, templateID, '#contact-form', publicKey)
+  emailjs.sendForm('service_z3043tg', 'template_iu2a0u9', '#contact-form', '9dWIYRnlvISrOuFgH')
     .then(() =>{
       // Show confirmation
       contactMessage.textContent = 'Message sent successfully ✅'
