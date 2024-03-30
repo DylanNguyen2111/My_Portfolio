@@ -141,6 +141,41 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
+/* EMAIL JS */
+require('dotenv').config(); // Load environment variables from .env file
+
+const contactForm = document.getElementById('contact-form')
+      contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+  e.preventDefault()
+
+  // Access environment variables
+  const serviceID = process.env.SERVICE_ID;
+  const templateID = process.env.TEMPLATE_ID;
+  const publicKey = process.env.PUBLIC_KEY;
+
+  // serviceID - templateID - #form -publicKey
+  emailjs.sendForm(serviceID, templateID, '#contact-form', publicKey)
+    .then(() =>{
+      // Show confirmation
+      contactMessage.textContent = 'Message sent successfully ✅'
+
+      // Remove message after 5 seconds
+      setTimeout(() =>{
+        contactMessage.textContent = ''
+      }, 5000)
+
+      // Clear input fields
+      contactForm.reset()
+    }, () =>{
+      // Show error message
+      contactMessage.textContent = 'Message not sent (service error) ❌'
+    })
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
 /* CHANGE BACKGROUND HEADER */
 function scrollHeader() {
   const nav = document.getElementById("header");
@@ -158,6 +193,17 @@ function scrollUp() {
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
+
+/* SCROLL REVEAL ANIMATION */
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  // reset: true // Animations repeat
+})
+
+sr.reveal('.home_data')
 
 /* DARK LIGHT THEME */
 const themeButton = document.getElementById("theme-button");

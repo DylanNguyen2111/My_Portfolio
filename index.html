@@ -14,7 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-
+    
 </head>
 
 <body>
@@ -573,7 +573,7 @@
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <span class="section-subtitle">Get in touch</span>
-
+            
             <div class="contact-container container grid">
                 <div class="contact-items">
                     <div class="contact-information">
@@ -602,26 +602,27 @@
                     </div>
                 </div>
 
-                <form onsubmit="sendEmail(); reset(); return false;" class="contact-form grid">
+                <form action="" class="contact-form grid", id="contact-form">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
                             <label for="" class="contact-label">Name</label>
-                            <input type="text" class="contact-input" id="name" required>
+                            <input type="text" class="contact-input" name="name" required placeholder="Enter your name">
                         </div>
                         <div class="contact-content">
                             <label for="" class="contact-label">Email</label>
-                            <input type="email" class="contact-input" id="email" required>
+                            <input type="email" class="contact-input" name="email" required placeholder="Enter your email">
                         </div>
                     </div>
                     <div class="grid">
                         <div class="contact-content">
                             <label for="" class="contact-label">Subject</label>
-                            <input type="text" class="contact-input" id="subject"required>
+                            <input type="text" class="contact-input" name="subject"required placeholder="Enter your subject">
                         </div>
                         <div class="contact-content">
                             <label for="" class="contact-label">Message</label>
-                            <textarea style="resize: none;" rows="5" class="contact-input" id="message" required></textarea>
+                            <textarea style="resize: none;" rows="5" class="contact-input" name="message" required placeholder="Enter your message"></textarea>
                         </div>
+                        <p class="contact__message" id="contact-message"></p>
                     </div>
                     <div class="contact-button">
                         <button class="button button-flex">
@@ -675,30 +676,15 @@
     <!-- SWIPER JS -->
     <script src="js/swiper-bundle.js"></script>
 
+    <!-- SCROLLREVEAL-->
+    <script src="js/scrollreveal.min.js"></script>
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 
-    <!-- Send Email JS -->
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-            function sendEmail(){
-                Email.send({
-                    SecureToken : "4e5bbb6a-79dc-4704-a14c-d239f611f543",
-                    Host : "smtp.elasticemail.com",
-                    Username : "khaikimhsgs@gmail.com",
-                    Password : "F2F69A7DB1B1FCD9F9F4568B7170954167D5",
-                    To : "khaikimhsgs@gmail.com",
-                    From : document.getElementById("email").value,
-                    Subject : document.getElementById("subject").value,
-                    Body : "Name: " + document.getElementById("name").value
-                        + "<br> Email: " + document.getElementById("email").value 
-                        + "<br> Subject: " + document.getElementById("subject").value 
-                        + "<br> Message: " + document.getElementById("message").value 
-                }).then(
-                message => alert("Message Sent Successfully")
-                );
-            }
+    <!-- Email JS-->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 </body>
 

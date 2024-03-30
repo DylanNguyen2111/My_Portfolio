@@ -271,6 +271,7 @@ img {
 
     &:hover {
         background-color: var(--first-color-alt);
+        transform: translateY(-3px);
     }
 
     &-icon {
@@ -1326,4 +1327,10 @@ img {
             margin-left: var(--mb-1);
         } 
     }
+}
+
+.section {
+    padding: 20px;
+    background-color: lightgray;
+    margin-bottom: 20px; /* Add margin-bottom to create a line break */
 }
