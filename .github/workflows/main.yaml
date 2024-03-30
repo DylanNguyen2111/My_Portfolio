@@ -1,9 +1,9 @@
-- name: Deploy to GitHub Pages
-  uses: JamesIves/github-pages-deploy-action@4.1.4
-  with:
-    branch: gh-pages
-    folder: dist # Or use '.' for the root directory if your files are there
-    token: ${{ secrets.GITHUB_TOKEN }}
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set your default branch here
 
 jobs:
   build-and-deploy:
@@ -25,8 +25,8 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: gh-pages  # The branch the action should deploy to.
-        folder: build      # The folder the action should deploy.
+        branch: gh-pages
+        folder: dist # Or use '.' for the root directory if your files are there
         token: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically creates this secret to authenticate in your workflow.
 
     - name: Inject secrets into JS
