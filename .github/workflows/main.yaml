@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main  # Set your default branch here
+- name: Deploy to GitHub Pages
+  uses: JamesIves/github-pages-deploy-action@4.1.4
+  with:
+    branch: gh-pages
+    folder: dist # Or use '.' for the root directory if your files are there
+    token: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build-and-deploy:
