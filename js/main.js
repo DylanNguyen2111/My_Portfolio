@@ -149,7 +149,7 @@ const sendEmail = (e) =>{
   e.preventDefault()
 
   // serviceID - templateID - #form -publicKey
-  emailjs.sendForm('service_z3043tg', 'template_iu2a0u9', '#contact-form', '9dWIYRnlvISrOuFgH')
+  emailjs.sendForm()
     .then(() =>{
       // Show confirmation
       contactMessage.textContent = 'Message sent successfully ✅'
