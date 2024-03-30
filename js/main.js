@@ -142,32 +142,36 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 /* EMAIL JS */
-const contactForm = document.getElementById('contact-form')
-      contactMessage = document.getElementById('contact-message')
+const serviceID = '%%EMAILJS_SERVICE_ID%%'; // To be replaced by your build script
+const templateID = '%%EMAILJS_TEMPLATE_ID%%'; // To be replaced by your build script
+const publicKey = '%%EMAILJS_PUBLIC_KEY%%'; // To be replaced by your build script
 
-const sendEmail = (e) =>{
-  e.preventDefault()
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact-message');
 
-  // serviceID - templateID - #form -publicKey
-  emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, '#contact-form', process.env.EMAILJS_PUBLIC_KEY)
-    .then(() =>{
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // Using the variables directly after replacement
+  emailjs.sendForm(serviceID, templateID, '#contact-form', publicKey)
+    .then(() => {
       // Show confirmation
-      contactMessage.textContent = 'Message sent successfully ✅'
+      contactMessage.textContent = 'Message sent successfully ✅';
 
       // Remove message after 5 seconds
-      setTimeout(() =>{
-        contactMessage.textContent = ''
-      }, 5000)
+      setTimeout(() => {
+        contactMessage.textContent = '';
+      }, 5000);
 
       // Clear input fields
-      contactForm.reset()
-    }, () =>{
+      contactForm.reset();
+    }, () => {
       // Show error message
-      contactMessage.textContent = 'Message not sent (service error) ❌'
-    })
-}
+      contactMessage.textContent = 'Message not sent (service error) ❌';
+    });
+};
 
-contactForm.addEventListener('submit', sendEmail)
+contactForm.addEventListener('submit', sendEmail);
 
 /* CHANGE BACKGROUND HEADER */
 function scrollHeader() {
