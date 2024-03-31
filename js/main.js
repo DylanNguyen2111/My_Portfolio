@@ -142,33 +142,30 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 /* EMAIL JS */
-const serviceID = '%%EMAILJS_SERVICE_ID%%'; // To be replaced by your build script
-const templateID = '%%EMAILJS_TEMPLATE_ID%%'; // To be replaced by your build script
-const publicKey = '%%EMAILJS_PUBLIC_KEY%%'; // To be replaced by your build script
-
 const contactForm = document.getElementById('contact-form');
 const contactMessage = document.getElementById('contact-message');
 
 const sendEmail = (e) => {
   e.preventDefault();
 
-  // Using the variables directly after replacement
-  emailjs.sendForm(serviceID, templateID, '#contact-form', publicKey)
-    .then(() => {
+  // Use EmailJS to send the form data
+  emailjs.sendForm('service_z3043tg', 'template_iu2a0u9', '#contact-form', '9dWIYRnlvISrOuFgH')
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
       // Show confirmation
       contactMessage.textContent = 'Message sent successfully ✅';
-
-      // Remove message after 5 seconds
-      setTimeout(() => {
-        contactMessage.textContent = '';
-      }, 5000);
-
       // Clear input fields
       contactForm.reset();
-    }, () => {
+    }, (error) => {
+      console.log('FAILED...', error);
       // Show error message
       contactMessage.textContent = 'Message not sent (service error) ❌';
     });
+
+  // Optionally, remove message after a delay
+  setTimeout(() => {
+    contactMessage.textContent = '';
+  }, 5000);
 };
 
 contactForm.addEventListener('submit', sendEmail);
