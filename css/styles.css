@@ -134,7 +134,7 @@ img {
 
 /* REUSABLE CSS CLASSES */
 .section {
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 1rem;
 }
 
 .section-title {
@@ -273,10 +273,12 @@ img {
 .home-container .home-content .home-social-icon {
   font-size: 1.25rem;
   color: var(--first-color);
+  transition: 0.3s;
 }
 
 .home-container .home-content .home-social-icon:hover {
   color: var(--first-color-alt);
+  transform: translateY(-.25rem);
 }
 
 .home-container .home-content .home-data {
@@ -330,10 +332,13 @@ img {
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
+  border: none;
+  transition: 0.3s;
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  transform: translateY(-.25rem);
 }
 
 .button-icon {
@@ -425,6 +430,11 @@ img {
   align-items: center;
   margin-bottom: var(--mb-2);
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.skills-container-header:hover{
+  transform: translateY(-.25rem)
 }
 
 .skills-container-header .skills-title {
@@ -551,10 +561,12 @@ img {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .qualification-tabs-button:hover {
   color: var(--first-color);
+  transform: translateY(-.25rem);
 }
 
 .qualification-tabs-button .qualification-icon {
@@ -924,10 +936,12 @@ img {
 .footer-container .footer-social {
   font-size: 1.25rem;
   margin-right: var(--mb-1-5);
+  transition: 0.3s;
 }
 
 .footer-container .footer-social:hover {
   color: var(--first-color-lighter);
+  transform: translateY(-.25rem);
 }
 
 .footer .footer-copy {
@@ -954,7 +968,7 @@ img {
   padding: .3rem .5rem;
   border-radius: .4rem;
   z-index: var(--z-tooltip);
-  transition: .4s;
+  transition: .3s;
 }
 
 .scrollup-icon {
@@ -964,6 +978,7 @@ img {
 
 .scrollup:hover {
   background-color: var(--first-color-alt);
+  transform: translateY(-.25rem);
 }
 
 /* Show scroll */
