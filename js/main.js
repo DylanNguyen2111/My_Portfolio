@@ -192,12 +192,16 @@ window.addEventListener("scroll", scrollUp);
 const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
-  duration: 2500,
-  delay: 400,
-  // reset: true // Animations repeat
+  duration: 1500,
+  delay: 200,
+  reset: true // Animations repeat
 })
 
-sr.reveal('.home_data')
+sr.reveal('.home-data, .home-social, .contact-container, .footer-container, .qualification-container')
+sr.reveal('.home-img', {origin: 'bottom'})
+sr.reveal('.about-container-data, .skills-container-content', {origin: 'left'})
+sr.reveal('.about-container-img, .portfolio-container', {origin: 'right'})
+sr.reveal('.project-bg', {interval: 100, origin: 'left'})
 
 /* DARK LIGHT THEME */
 const themeButton = document.getElementById("theme-button");

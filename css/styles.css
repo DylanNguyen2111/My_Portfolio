@@ -1058,6 +1058,9 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
+  .container {
+    padding: 0 2%;
+  }
   .home-content {
     grid-template-columns: max-content 1fr 1fr !important;
   }
@@ -1137,6 +1140,7 @@ img {
   .container {
     margin-left: auto;
     margin-right: auto;
+    padding: 0 4%;
   }
   body {
     margin: 0;
@@ -1248,6 +1252,9 @@ img {
 @media screen and (min-width: 1024px) {
   .header,
   .main,
+  .container {
+    padding: 0 6%;
+  }
   .footer-container {
     padding: 0;
   }
@@ -1301,3 +1308,10 @@ img {
   }
 }
 /*# sourceMappingURL=styles.css.map */
+
+
+.container {
+  max-width: 1200px; /* Adjusted for larger screens */
+  margin: 0 auto; /* Center content */
+  padding: 0 2%;
+}
