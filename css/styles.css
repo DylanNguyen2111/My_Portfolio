@@ -178,7 +178,7 @@ img {
 }
 
 .header .nav {
-  max-width: 968px;
+  max-width: 90%;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -201,6 +201,10 @@ img {
 
 .header .nav-logo:hover, .header .nav-toggle:hover {
   color: var(--first-color);
+}
+
+.header .nav-logo:hover{
+  text-decoration: underline;
 }
 
 .header .nav-toggle {
@@ -229,6 +233,7 @@ img {
 
 .header .nav-link:hover {
   color: var(--first-color);
+  text-decoration: underline;
 }
 
 .header .nav-close {
@@ -242,6 +247,11 @@ img {
 
 .header .nav-close:hover {
   color: var(--first-color-alt);
+}
+
+.nav-btns {
+  margin-top: 15%;
+  margin-left: 45%
 }
 
 /* HOME */
@@ -339,6 +349,7 @@ img {
 .button:hover {
   background-color: var(--first-color-alt);
   transform: translateY(-.25rem);
+  cursor: pointer;
 }
 
 .button-icon {
