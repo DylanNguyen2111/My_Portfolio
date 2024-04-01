@@ -203,10 +203,6 @@ img {
   color: var(--first-color);
 }
 
-.header .nav-logo:hover{
-  text-decoration: underline;
-}
-
 .header .nav-toggle {
   font-size: 1.2rem;
   cursor: pointer;
@@ -218,22 +214,33 @@ img {
 }
 
 .header .nav-link {
+  position: relative;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  transition: 0.3s;
+}
+
+.header .nav-link:after{
+  content: "";
+  position: absolute;
+  background-color: var(--first-color-alt);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: all 0.3s ease;
+}
+
+.header .nav-link:hover:after{
+  width: 100%;
 }
 
 .header .nav-link-icon {
   font-size: 1.2rem;
-}
-
-.header .nav-link:hover {
-  color: var(--first-color);
-  text-decoration: underline;
 }
 
 .header .nav-close {
