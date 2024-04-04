@@ -119,26 +119,39 @@ var swiperTestimonial = new Swiper(".testimonial-container", {
 
 /* SCROLL SECTIONS ACTIVE LINK */
 const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-menu a");
 
 function scrollActive() {
-  const scrollY = window.pageYOffset;
+    const verticalScrollPosition = window.scrollY || window.pageYOffset;
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute("id");
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
-    }
-  });
+        const navLink = document.querySelector(".nav-menu a[href='#" + sectionId + "']");
+        
+        if (navLink) {
+            if (verticalScrollPosition > sectionTop && verticalScrollPosition <= sectionTop + sectionHeight) {
+                navLink.classList.add("active-link");
+            } else {
+                navLink.classList.remove("active-link");
+            }
+        }
+    });
 }
+
+function handleClick(event) {
+    navLinks.forEach(navLink => {
+        navLink.classList.remove("active-link");
+    });
+    event.target.classList.add("active-link");
+}
+
+navLinks.forEach(navLink => {
+    navLink.addEventListener("click", handleClick);
+});
+
 window.addEventListener("scroll", scrollActive);
 
 /* EMAIL JS */
