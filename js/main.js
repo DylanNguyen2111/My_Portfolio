@@ -91,31 +91,31 @@ modalCloses.forEach((modalClose) => {
 });
 
 /* PORTFOLIO SWIPER  */
-var swiperPortfolio = new Swiper(".portfolio-container", {
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+// var swiperPortfolio = new Swiper(".portfolio-container", {
+//   cssMode: true,
+//   loop: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
 
 /* TESTIMONIAL */
-var swiperTestimonial = new Swiper(".testimonial-container", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 50,
+// var swiperTestimonial = new Swiper(".testimonial-container", {
+//   loop: true,
+//   grabCursor: true,
+//   spaceBetween: 50,
 
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
-    },
-  },
-});
+//   breakpoints: {
+//     568: {
+//       slidesPerView: 2,
+//     },
+//   },
+// });
 
 /* SCROLL SECTIONS ACTIVE LINK */
 const sections = document.querySelectorAll("section[id]");
@@ -206,16 +206,25 @@ const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
   duration: 1500,
-  delay: 200,
+  delay: 100,
   reset: true // Animations repeat
 })
 
 sr.reveal('.home-data, .home-social, .contact-container, .footer-container, .qualification-container')
-sr.reveal('.home-img', {origin: 'bottom'})
-sr.reveal('.about-container-data, .skills-container-content', {origin: 'left'})
+sr.reveal('.home-img, .portfolio-box, .skills-icon', {origin: 'bottom'})
+sr.reveal('.section-title, .section-subtitle', {origin: 'top'})
+sr.reveal('.about-container-data, .skills-container-content, .services-container', {origin: 'left'})
 sr.reveal('.about-container-img, .portfolio-container', {origin: 'right'})
 sr.reveal('.project-bg', {interval: 100, origin: 'left'})
 
+/* TYPED ANIMATION */
+const typed = new Typed('.multiple-text', {
+  strings: ['Data Scientist', 'Data Analyst', 'Business Analyst'],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+})
 /* DARK LIGHT THEME */
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";

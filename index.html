@@ -24,47 +24,51 @@
     <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav-logo">Dylan Nguyen</a>
+            <a href="#" class="nav-logo" style="font-weight: bold;">Dylan Nguyen</a>
+
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list grid">
                     <li class="nav-item">
                         <a href="#home" class="nav-link active-link">
-                            <i class="uil uil-estate nav-link-icon"></i> Home
+                            <i class="fas fa-home nav-link-icon"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">
-                            <i class="uil uil-user nav-link-icon"></i> About
+                            <i class="fas fa-user nav-link-icon"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#skills" class="nav-link">
-                            <i class="uil uil-file-alt nav-link-icon"></i> Skills
+                            <i class="fas fa-file-alt nav-link-icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">
+                            <i class="fas fa-briefcase nav-link-icon"></i> Services
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#portfolio" class="nav-link">
-                            <i class="uil uil-scenery nav-link-icon"></i> Portfolio
+                            <i class="fas fa-image nav-link-icon"></i> Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">
-                            <i class="uil uil-message nav-link-icon"></i> Contact
+                            <i class="fas fa-envelope nav-link-icon"></i> Contact
                         </a>
-                    </li>
-                    <li>
-                        <div class="nav-btns">
-
-                            <!-- Theme change button -->
-                            <i class="fas fa-moon change-theme" id="theme-button"></i>
-        
-                            <div class="nav-toggle" id="nav-toggle">
-                                <i class="fas fa-qrcode"></i>
-                            </div>
-                        </div>
                     </li>
                 </ul>
                 <i class="fas fa-times nav-close" id="nav-close"></i>
+            </div>
+            <div class="nav-btns">
+
+                <!-- Theme change button -->
+                <i class="fas fa-moon change-theme" id="theme-button"></i>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-qrcode"></i>
+                </div>
             </div>
         </nav>
     </header>
@@ -90,8 +94,8 @@
                        <img src="img/home_picture.PNG" alt="This is my home picture">
                     </div>
                     <div class="home-data">
-                        <h1 class="home-data-title">Hi, I'm Dylan</h1>
-                        <h3 class="home-data-subtitle">Aspiring Data Scientist</h3>
+                        <h1 class="home-data-title">Hi, It's me Dylan</h1>
+                        <h3 class="home-data-subtitle">I'm an aspiring <span class="multiple-text"></span></h3>
                         <p class="home-data-description">High level experience in data science knowledge,
                             producing quality work.</p>
                         <a href="#contact" class="button button-flex">
@@ -148,214 +152,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-            <span class="section-subtitle">My technical level</span>
-
-            <div class="skills-container container grid">
-                <div>
-                    <!-- SKILLS 1 -->
-                    <div class="skills-container-content skills-close">
-
-                        <div class="skills-container-header">
-                            <i class="fas fa-code skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Machine Learning</h1>
-                                <span class="skills-subtitle">More than 1 years</span>
-                            </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
-                        </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Pandas</h3>
-                                    <span class="skills-number">90%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-html"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Numpy</h3>
-                                    <span class="skills-number">80%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-css"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Matplotlib</h3>
-                                    <span class="skills-number">60%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-js"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Scikit-learn</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-react"></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SKILLS 2 -->
-                    <div class="skills-container-content skills-close">
-
-                        <div class="skills-container-header">
-                            <i class="fas fa-server skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Deep Learning</h1>
-                                <span class="skills-subtitle">More than 1 years</span>
-                            </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
-                        </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">TensorFlow</h3>
-                                    <span class="skills-number">80%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-php"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">PyTorch</h3>
-                                    <span class="skills-number">70%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-node"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Keras</h3>
-                                    <span class="skills-number">90%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-firebase"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">PyTorch Lighting</h3>
-                                    <span class="skills-number">55%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-python"></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div>
-                    <!-- SKILLS 3 -->
-                    <div class="skills-container-content skills-close">
-
-                        <div class="skills-container-header">
-                            <i class="fas fa-swatchbook skills-icon"></i>
-                            <div>
-                                <h1 class="skills-title">Python</h1>
-                                <span class="skills-subtitle">More than 2 years</span>
-                            </div>
-                            <i class="fas fa-angle-down skills-arrow"></i>
-                        </div>
-
-                        <div class="skills-list grid">
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Pandas</h3>
-                                    <span class="skills-number">90%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-figma"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Numpy</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-sketch"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Matplotlib</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-ps"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Seaborn</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-ps"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">BeautifulSoup</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-ps"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills-data">
-                                <div class="skills-titles">
-                                    <h3 class="skills-name">Scrapy</h3>
-                                    <span class="skills-number">85%</span>
-                                </div>
-                                <div class="skills-bar">
-                                    <span class="skills-percentage skills-ps"></span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -519,14 +315,187 @@
             </div>
         </section>
 
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <span class="section-subtitle">I have experience with</span>
+
+            <div class="skills-container container grid">
+                <div class="skills-icon">
+                    <img src="logo/programing-languages/Python_logo.png" alt="Python">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/programing-languages/R_logo.png" alt="R">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/programing-languages/SQL_logo.png" alt="SQL">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/data-visualization/Excel_logo.png" alt="Excel">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/data-visualization/PowerBI_logo.png" alt="Power BI">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/data-visualization/Tableau_logo.png" alt="Tableau">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/machine-learning/HuggingFace_logo.png" alt="Hugging Face">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/machine-learning/OpenCV_logo.png" alt="OpenCV">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/machine-learning/Pytorch_logo.png" alt="Pytorch">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/machine-learning/Scikit_learn_logo.png" alt="Scikit Learn">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/machine-learning/Tensorflow_logo.png" alt="TensorFlow">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/database-management/MySQL_logo.png" alt="MySQL">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/database-management/Oracle_logo.png" alt="Oracle">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/database-management/Postgresql_logo.png" alt="PostgreSQL">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/cloud-computing/AWS_logo.png" alt="AWS">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/cloud-computing/Azure_logo.png" alt="Azure">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/cloud-computing/GoogleCloud_logo.png" alt="Google Cloud">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/database-management/ApacheSpark_logo.png" alt="Apache Spark">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/mlops/Docker_logo.png" alt="Docker">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/mlops/DVC_logo.png" alt="DVC">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/mlops/Git_logo.png" alt="Git">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/mlops/Mlflow_logo.png" alt="Mlflow">
+                </div>
+                <div class="skills-icon">
+                    <img src="logo/mlops/Streamlit_logo.png" alt="Streamlit">
+                </div>
+                
+            
+                <!-- <div>
+                    <div class="skills-container-content skills-close">
+
+                        <div class="skills-container-header">
+                            <i class="fas fa-code skills-icon"></i>
+                            <div>
+                                <h1 class="skills-title">Machine Learning</h1>
+                                <span class="skills-subtitle">More than 1 years</span>
+                            </div>
+                            <i class="fas fa-angle-down skills-arrow"></i>
+                        </div>
+
+                        <div class="skills-list grid">
+
+                            <div class="skills-data">
+                                <div class="skills-titles">
+                                    <h3 class="skills-name">Pandas</h3>
+                                    <span class="skills-number">90%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-html"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titles">
+                                    <h3 class="skills-name">Numpy</h3>
+                                    <span class="skills-number">80%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-css"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titles">
+                                    <h3 class="skills-name">Matplotlib</h3>
+                                    <span class="skills-number">60%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-js"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <div class="skills-titles">
+                                    <h3 class="skills-name">Scikit-learn</h3>
+                                    <span class="skills-number">85%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <span class="skills-percentage skills-react"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section" id="services">
+            <h2 class="section-title">Services</h2>
+            <span class="section-subtitle">What I offer</span>
+
+            <div class="services-container container grid">
+
+                <div class="services-box">
+                    <i class="fa-solid fa-file-contract"></i>
+                    <h3>Business Intelligence</h3>
+                    <p>I provide deep analytical insights that support strategic decision-making and operational improvements. By
+                        analyzing and interpreting complex datasets, I help organizations identify opportunities for growth, optimize their workflows,
+                        improve customer experience and increase their competitive advantage.
+                    </p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+
+                <div class="services-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Predictive Modeling</h3>
+                    <p>I apply statistical techniques and machine learning algorithms to predict future 
+                        outcomes based on historical data. My expertise enables businesses to anticipate market dynamics, 
+                        optimize resource allocation, and enhance decision-making processes by providing forecasts with 
+                        high accuracy.</p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+
+                <div class="services-box">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h3>Data Visualization</h3>
+                    <p>I specialize in presenting complex data in an understandable and visually engaging format. By creating 
+                        intuitive charts, graphs, and interactive dashboards, I enable stakeholders to grasp difficult concepts 
+                        and derive insights quickly, supporting faster and more informed decision-making.</p>
+                    <!-- <a href="#" class="btn">Read More</a> -->
+                </div>
+            </div>
+        </section>
         <!-- PORTFOLIO -->
-        <section class="portfolio section" id="portfolio">
+        <!-- <section class="portfolio section" id="portfolio">
             <h2 class="section-title">Portfolio</h2>
             <span class="section-subtitle">Most recent work</span>
 
             <div class="portfolio-container container swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- PORTFOLIO 1 -->
+                    
                     <div class="portfolio-content grid swiper-slide">
                         <img src="img/Pneumonia.jpeg" alt="Portfolio" class="portfolio-img">
                         <div class="portfolio-data">
@@ -538,7 +507,7 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PORTFOLIO 2 -->
+                    
                     <div class="portfolio-content grid swiper-slide">
                         <img src="img/chat_with_pdf.png" alt="Portfolio" class="portfolio-img">
                         <div class="portfolio-data">
@@ -549,7 +518,7 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PORTFOLIO 3 -->
+                    
                     <div class="portfolio-content grid swiper-slide">
                         <img src="img/signal.jpg" alt="Portfolio" class="portfolio-img">
                         <div class="portfolio-data">
@@ -562,15 +531,91 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add Arrow -->
+                
                 <div class="swiper-button-next">
                     <i class="fas fa-angle-right swiper-portfolio-icon"></i>
                 </div>
                 <div class="swiper-button-prev">
                     <i class="fas fa-angle-left swiper-portfolio-icon"></i>
                 </div>
-                <!-- Add Pagination -->
+                
                 <div class="swiper-pagination"></div>
+            </div>
+        </section> -->
+
+        <!-- PORTFOLIO DEVELOPER -->
+        <section class="'portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <span class="section-subtitle">Most recent work</span>
+
+            <div class="portfolio-container container">
+                <div class="portfolio-box">
+                    <img src="img/Pneumonia.jpeg" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">Advanced Pneumonia Detection System</h3> -->
+                        <p class="portfolio-description">An MLOps-powered solution for automating pneumonia detection with 
+                            MLflow, Dagshub, DVC and AWS.</p>
+                        <a href="https://github.com/DylanNguyen2111/Pneumonia-Detection" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="img/chat_with_pdf.png" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">LLM-Powered Knowledge Retrieval System</h3> -->
+                        <p class="portfolio-description">A Chatbot to query information from your pdf documents using Langchain and OpenAI API.</p>
+                        <a href="https://github.com/DylanNguyen2111/Chat_with_your_PDFs" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="img/signal.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">Deep Learning based Automatic Modulation Recognition</h3> -->
+                        <p class="portfolio-description">A Transformer-based model for robust signal modulation classification
+                            over 12 differents modulation types.</p>
+                        <a href="https://github.com/DylanNguyen2111/Deep-learning-based-automatic-data-modulation-classification-with-impairments" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="img/chat_with_pdf.png" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">LLM-Powered Knowledge Retrieval System</h3> -->
+                        <p class="portfolio-description">A Chatbot to query information from your pdf documents using Langchain and OpenAI API.</p>
+                        <a href="https://github.com/DylanNguyen2111/Chat_with_your_PDFs" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="img/chat_with_pdf.png" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">LLM-Powered Knowledge Retrieval System</h3> -->
+                        <p class="portfolio-description">A Chatbot to query information from your pdf documents using Langchain and OpenAI API.</p>
+                        <a href="https://github.com/DylanNguyen2111/Chat_with_your_PDFs" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="img/chat_with_pdf.png" alt="">
+                    <div class="portfolio-layer">
+                        <!-- <h3 class="portfolio-title">LLM-Powered Knowledge Retrieval System</h3> -->
+                        <p class="portfolio-description">A Chatbot to query information from your pdf documents using Langchain and OpenAI API.</p>
+                        <a href="https://github.com/DylanNguyen2111/Chat_with_your_PDFs" class="button button-flex button-small portfolio-button">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -696,10 +741,11 @@
     <script src="https://kit.fontawesome.com/027d3564f6.js" crossorigin="anonymous"></script>
 
     <!-- SWIPER JS -->
-    <script src="js/swiper-bundle.js"></script>
-
+    <!-- <script src="js/swiper-bundle.js"></script> -->
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- SCROLLREVEAL-->
-    <script src="js/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
 
