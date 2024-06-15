@@ -219,7 +219,7 @@ sr.reveal('.project-bg', {interval: 100, origin: 'left'})
 
 /* TYPED ANIMATION */
 const typed = new Typed('.multiple-text', {
-  strings: ['Data Scientist', 'Data Analyst', 'Business Analyst'],
+  strings: ['Data Scientist', 'Business Analyst', 'Data Analyst'],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
