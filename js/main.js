@@ -321,9 +321,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add click and touch event listeners to each card
   document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
     slide.addEventListener('click', () => {
+      alert('clicked');
       swiper.slideTo(index);
     });
     slide.addEventListener('touchstart', () => {
+      alert('touched');
       swiper.slideTo(index);
     });
   });
