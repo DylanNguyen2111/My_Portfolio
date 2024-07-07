@@ -329,4 +329,12 @@ document.addEventListener('DOMContentLoaded', function () {
       swiper.slideTo(index);
     });
   });
+  // Disable overflow: hidden temporarily to allow touch interaction on hidden slides
+  swiper.on('touchStart', function () {
+    swiper.wrapperEl.style.overflow = 'visible';
+  });
+
+  swiper.on('touchEnd', function () {
+    swiper.wrapperEl.style.overflow = 'hidden';
+  });
 });
