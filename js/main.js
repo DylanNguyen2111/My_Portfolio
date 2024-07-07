@@ -321,20 +321,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add click and touch event listeners to each card
   document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
     slide.addEventListener('click', () => {
-      alert('clicked');
       swiper.slideTo(index);
     });
     slide.addEventListener('touchstart', () => {
-      alert('touched');
       swiper.slideTo(index);
     });
-  });
-  // Disable overflow: hidden temporarily to allow touch interaction on hidden slides
-  swiper.on('touchStart', function () {
-    swiper.wrapperEl.style.overflow = 'visible';
-  });
-
-  swiper.on('touchEnd', function () {
-    swiper.wrapperEl.style.overflow = 'hidden';
   });
 });

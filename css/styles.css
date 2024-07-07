@@ -925,6 +925,9 @@ img {
   position: relative;
 }
 
+.swiper-slide {
+  pointer-events: auto;
+}
 .card:hover { /* No space between .services-box and :hover */
   border-color: var(--first-color); /* Make sure --input-color is defined */
   transform: scale(1.02);
