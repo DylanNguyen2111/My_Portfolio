@@ -318,9 +318,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
   });
-  // Add click event listener to each card
+  // Add click and touch event listeners to each card
   document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
     slide.addEventListener('click', () => {
+      swiper.slideTo(index);
+    });
+    slide.addEventListener('touchstart', () => {
       swiper.slideTo(index);
     });
   });
