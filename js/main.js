@@ -324,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function () {
       swiper.slideTo(index);
     });
     slide.addEventListener('touchstart', () => {
+      alert('touched');
       swiper.slideTo(index);
     });
   });
