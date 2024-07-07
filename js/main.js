@@ -205,8 +205,8 @@ window.addEventListener("scroll", scrollUp);
 const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
-  duration: 1500,
-  delay: 100,
+  duration: 1000,
+  delay: 50,
   reset: true // Animations repeat
 })
 
@@ -269,6 +269,8 @@ document.addEventListener('DOMContentLoaded', function () {
       centeredSlides: true,
       slidesPerView: 3,
       loop: true,
+      fade:'true',
+      // grabCursor:'true',
       coverflowEffect: {
           rotate: 0,
           stretch: 0,
@@ -289,5 +291,37 @@ document.addEventListener('DOMContentLoaded', function () {
           disableOnInteraction: true,
       },
       speed: 500, // Decrease speed for faster transitions (in milliseconds)
+      breakpoints: {
+        100: {
+          slidesPerView: 1, // 1 slide per view for small devices
+          spaceBetween: 0
+        },
+        432: {
+          slidesPerView: 1.1, // 1 slide per view for small devices
+          spaceBetween: 10
+        },
+        600: {
+          slidesPerView: 1.5, // 1 slide per view for small devices
+          spaceBetween: 10
+        },
+        850: {
+          slidesPerView: 2, // 1 slide per view for small devices
+          spaceBetween: 10
+        },
+        1190: {
+          slidesPerView: 2.5, // 2 slides per view for medium devices
+          spaceBetween: 10
+        },
+        1480: {
+          slidesPerView: 3, // 3 slides per view for large devices
+          spaceBetween: 30
+        }
+      }
+  });
+  // Add click event listener to each card
+  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      swiper.slideTo(index);
+    });
   });
 });

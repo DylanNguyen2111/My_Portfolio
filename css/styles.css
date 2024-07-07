@@ -355,6 +355,17 @@ img {
   transition: 0.3s;
 }
 
+.small-button {
+  bottom: 1em;
+  padding: 0.7em 1em; /* Adjust padding */
+  font-size: 0.8rem; /* Adjust font size */
+  transform: scale(0.9); /* Scale down the entire button */
+}
+
+.small-button .button-icon {
+  font-size: 0.9rem; /* Adjust icon size if necessary */
+}
+
 .button-flex {
   display: inline-flex;
   align-items: center;
@@ -897,19 +908,20 @@ img {
 }
 
 .card{
-  width: 20em;
+  width: 30em;
   aspect-ratio: 21/9;
-  background-color: #fff;
   border: 0.2rem solid rgba(9, 117, 234, 0.1);
   transition: .5s ease;
   border-radius: 2em;
+  background-color: var(--body-color);
   /* box-shadow: 0 0 2em rgba(0, 0, 0, .2); */
-  padding: .2rem;
+  padding: 1.5rem 1.5rem;
   overflow: hidden;
   box-shadow: 0 0 .3rem var(--first-color);
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .card:hover { /* No space between .services-box and :hover */
@@ -928,12 +940,12 @@ img {
 }
 
 .card__image{
-  width: 10em;
-  height: 10em;
+  width: 8em;
+  height: 8em;
   border-radius: 50%;
   border: 5px solid var(--first-color-alt);
   padding: 3px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .card__image img{
@@ -954,7 +966,7 @@ img {
 .card__title{
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  font-size: larger;
+  font-size: var(--h3-font-size);
   position: relative;
   top: .2em;
 }
@@ -963,16 +975,56 @@ img {
   color
 } */
 
-.card__text{
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  position: absolute;
+  bottom: 100%; /* Position above the icon */
+  left: 50%; /* Center the label */
+  transform: translateX(-50%); /* Align center */
+  white-space: nowrap; /* Prevents the label from wrapping */
+  visibility: hidden; /* Hide by default */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: var(--first-color-alt); /* Background of the tooltip */
+  color: white; /* Text color */
   text-align: center;
-  font-size: 1.1rem;
-  margin: 1em 0;
-  margin-bottom: var(--mb-2-5);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.75rem; /* Adjust size as necessary */
+  z-index: 10; /* Ensure it is above other content */
+  font-style: var(--body-font);
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /*Arrow below the tooltip*/
+  left: 50%;
+  margin-left: -5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  bottom: 110%;
+}
+
+
+.card__content .card__text{
+  text-align: justify;
+  margin: 1rem 0 1.5rem;
 }
 
 .swiper-pagination {
   position: absolute;
-  top: -2rem; /* Adjusted to provide more space above the pagination */
+  bottom: -5rem; /* Adjusted to provide more space above the pagination */
   left: 0;
   right: 0;
   text-align: center;
@@ -980,18 +1032,6 @@ img {
   z-index: 10;
 }
 
-.card__btn{
-  background-color: var(--color);
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: none;
-  padding: .5em;
-  border-radius: .5em;
-  margin-top: .5em;
-  cursor: pointer;
-}
 /* .testimonial-data,
 .testimonial-header {
   display: flex;
@@ -1021,11 +1061,11 @@ img {
 
 .testimonial-data .testimonial-description {
   margin-bottom: var(--mb-2-5);
-}
-
-.testimonial-data .testimonial-icon-star {
-  color: var(--first-color);
 } */
+
+.card__content .testimonial-icon-star {
+  color: #FFBF00;
+}
 
 /* CONTACT ME */
 .contact-container {
@@ -1469,6 +1509,21 @@ img {
     grid-template-columns: 1fr max-content;
     column-gap: 3rem;
   }
+.card {
+  width: 30em; /* Set original width for larger screens */
+  aspect-ratio: 21/9; /* Maintain aspect ratio */
+  padding: 1.5rem; /* Adjust padding */
+}
+
+.card__image {
+  width: 8em; /* Adjust image size */
+  height: 8em;
+  margin-bottom: 1em; /* Adjust spacing */
+}
+
+.card__content {
+  font-size: var(--h4-font-size); /* Adjust font size */
+}
 }
 
 /* For large devices */
